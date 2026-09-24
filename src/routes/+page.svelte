@@ -263,7 +263,14 @@
 					class="underline decoration-slate-400 underline-offset-2 hover:decoration-slate-700"
 				>
 					Pekka Pulli
-				</a>.
+				</a>. Lähdekoodi on saatavilla
+				<a
+					href="https://github.com/pekkapulli/pro-data-analysis"
+					target="_blank"
+					rel="noreferrer"
+					class="underline decoration-slate-400 underline-offset-2 hover:decoration-slate-700"
+					>GitHubissa</a
+				>.
 			</p>
 		</article>
 	</section>
