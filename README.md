@@ -1,3 +1,9 @@
+# Rojaltit.net
+
+Rojaltit.net on riippumaton selainpohjainen työkalu, jolla musiikintekijät voivat analysoida Teostolta saamiaan tilitystietoja. Se auttaa hahmottamaan korvausten määrää, rakennetta ja ajoitusta esimerkiksi tilitysalueittain, maittain, teoksittain ja käyttöjaksoittain.
+
+Käyttäjän CSV-muotoinen tilitysdata käsitellään ensisijaisesti paikallisesti selaimessa, eikä sitä lähetetä palvelimelle. Käyttäjä voi halutessaan osallistua yhteisen tutkimusaineiston muodostamiseen: tällöin aineistosta poistetaan suorat tunnistetiedot, se pseudonymisoidaan ja lähetettävät tiedot rajataan tutkimuksen kannalta tarpeellisiin tietoihin.
+
 # sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
