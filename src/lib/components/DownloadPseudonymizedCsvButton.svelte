@@ -133,6 +133,7 @@
 				<form
 					method="POST"
 					action="?/sendPseudonymizedEmail"
+					enctype="multipart/form-data"
 					class="mt-4 space-y-4"
 					use:enhance={async ({ formData }) => {
 						if (!hasResearchConsent) {
