@@ -127,16 +127,17 @@ function formatKerrat(value: number | null): string {
 	return Number.isInteger(value) ? String(value) : value.toString();
 }
 
-function buildFileName(): string {
+function buildFileName(saltFingerprint: string): string {
 	const now = new Date();
 	const year = now.getFullYear();
 	const month = String(now.getMonth() + 1).padStart(2, '0');
 	const day = String(now.getDate()).padStart(2, '0');
-	return `teosto-pseudonymized-${year}-${month}-${day}.csv`;
+	return `teosto-pseudonymized-${year}-${month}-${day}-${saltFingerprint}.csv`;
 }
 
 export async function buildPseudonymizedCsvExport(rows: ParsedRow[]): Promise<PseudonymizedExport> {
 	const salt = createSalt();
+	const saltFingerprint = salt.slice(0, 8);
 	const exportRows = await Promise.all(
 		rows.map(async (row): Promise<ExportRow> => {
 			return {
@@ -163,7 +164,7 @@ export async function buildPseudonymizedCsvExport(rows: ParsedRow[]): Promise<Ps
 
 	return {
 		csv: csvFormat(exportRows),
-		fileName: buildFileName(),
-		saltFingerprint: salt.slice(0, 8)
+		fileName: buildFileName(saltFingerprint),
+		saltFingerprint
 	};
 }
