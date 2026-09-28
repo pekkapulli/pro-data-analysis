@@ -100,11 +100,12 @@
 	<section class="mx-auto max-w-xl px-6 pt-20 pb-16 md:pt-28">
 		<header class="mb-12 max-w-4xl">
 			<h1 class="mb-4 text-4xl leading-tight font-semibold text-slate-900 md:text-6xl">
-				Säveltäjä, analysoi teostotietosi!
+				Analysoi teostodatasi
 			</h1>
 			<p class="max-w-2xl text-lg leading-relaxed text-slate-700">
-				Tuo Teosto-datasi työkaluun ja tutki sitä maittain, biiseittäin tai vaikka esitystavan
-				mukaan. Kaikki käsittely tapahtuu selaimessasi, eikä dataa lähetetä palvelimelle.
+				Tuo Teosto-datasi työkaluun ja tarkastele korvauksiasi maittain, biiseittäin,
+				esitystavoittain tai ajanjaksoittain. Kaikki käsittely tapahtuu selaimessasi, eikä dataasi
+				lähetetä palvelimelle.
 			</p>
 		</header>
 
@@ -144,25 +145,26 @@
 		</section>
 
 		<section class="mt-10 max-w-xl text-slate-700" aria-label="CSV-latausohjeet">
-			<h2 class="mb-4 text-2xl font-semibold text-slate-900">Näin lataat Teosto-datasi</h2>
+			<h2 class="mb-4 text-2xl font-semibold text-slate-900">Näin lataat tilitysdatasi</h2>
 			<p class="mb-4 leading-relaxed">
-				Aloita lataamalla yksi tai useampi Teoston CSV-muotoinen tiedosto.
+				Aloita lataamalla yksi tai useampi CSV-muotoinen tilitystiedosto Teosto-tililtäsi.
 			</p>
 			<ol class="list-inside list-decimal space-y-2 leading-relaxed">
 				<li>Kirjaudu Teosto-tilillesi.</li>
-				<li>Siirry kohtaan "Korvaukset".</li>
-				<li>Valitse välilehti "Kertyneet tilitykset".</li>
-				<li>Valitse välilehti "Vuosittain".</li>
-				<li>Valitse "Lataa tilitysdata Exceliin".</li>
+				<li>Siirry kohtaan <strong>Korvaukset</strong>.</li>
+				<li>Valitse välilehti <strong>Kertyneet tilitykset</strong>.</li>
+				<li>Valitse välilehti <strong>Vuosittain</strong>.</li>
+				<li>Valitse <strong>Lataa tilitysdata Exceliin</strong>.</li>
 				<li>
-					Lataa CSV-tiedostot jokaiselta vuodelta. Tässä kestää hetki, joten kahvikuppi voi olla
-					hyvä idea.
+					Lataa CSV-tiedostot haluamiltasi ajajaksoilta. Tässä voi kestää hetki, joten kahvikuppi
+					voi olla hyvä idea.
 				</li>
-				<li>Lataa lataamasi CSV-tiedosto(t) tänne analyysin aloittamiseksi.</li>
+				<li>Tuo lataamasi CSV-tiedosto(t) Rojaltit.netiin ja aloita analyysi.</li>
 			</ol>
 			<p class="mt-4 leading-relaxed">
-				Emme lähetä tietojasi minnekään, vaan kaikki käsittely tapahtuu selaimessasi. Emme käytä
-				seurantakeksejä emmekä kerää henkilötietoja.
+				Tilitysdata käsitellään kokonaan selaimessasi, eikä sitä lähetetä palvelimelle. Emme käytä
+				seurantakeksejä emmekä kerää henkilötietoja. Datasi pysyy sinulla ellet halua jakaa sitä
+				itse.
 			</p>
 		</section>
 	</section>
@@ -170,86 +172,95 @@
 		<article>
 			<h2 class="text-md mb-2 font-bold tracking-[0.12em] uppercase">Tietoja</h2>
 			<p>
-				Tämän riippumattoman työkalun ovat rakentaneet säveltäjä ja data-asiantuntija Pekka Pulli
-				sekä mediasäveltäjä Arttu Silvast.
+				Rojaltit.net on riippumaton työkalu, jonka ovat rakentaneet säveltäjä ja data-asiantuntija
+				Pekka Pulli sekä säveltäjä Arttu Silvast.
 			</p>
 			<p>
 				Tekijänoikeuskorvaukset muodostavat monelle musiikintekijälle merkittävän osan
-				toimeentulosta. Omien tilitysten kokonaiskuvan hahmottaminen voi silti olla vaikeaa. Kuinka
-				kauan käytöstä korvauksen maksamiseen kuluu? Ovatko tilitysajat muuttuneet vuosien aikana?
-				Miten eri tilitysalueet ja maat eroavat toisistaan? Kuinka paljon vanhoista käyttöjaksoista
-				tulee korvauksia vielä vuosia myöhemmin?
+				toimeentulosta. Omien tilitysten kokonaiskuvan hahmottaminen voi silti olla vaikeaa.
 			</p>
 			<p>
-				Rakensimme rojaltit.netin, jotta musiikintekijät voivat tarkastella Teostolta saamiaan
-				tilitystietoja aiempaa helpommin ja muodostaa omasta datastaan kokonaiskuvan tilitystensä
-				määrästä, rakenteesta ja ajoituksesta.
+				Kuinka kauan musiikin käytöstä korvauksen maksamiseen kuluu? Ovatko tilitysajat muuttuneet
+				vuosien aikana? Miten eri maat ja tilitysalueet eroavat toisistaan? Kuinka paljon vanhoihin
+				käyttöjaksoihin liittyviä korvauksia maksetaan vielä vuosia myöhemmin?
 			</p>
 			<p>
-				Samalla haluamme selvittää suuremman aineiston avulla, miten tilitysajat ja niiden vaihtelu
-				ovat kehittyneet eri tilitysalueilla ja eri vuosina.
+				Rakensimme Rojaltit.netin, jotta musiikintekijät voivat tutkia omia tilitystietojaan
+				helposti ja muodostaa kokonaiskuvan korvaustensa määrästä, rakenteesta ja ajoituksesta.
+			</p>
+			<p>
+				Samalla haluamme tutkia laajemman aineiston avulla, miten tilitysajat ja niiden vaihtelu
+				ovat kehittyneet eri tilitysalueilla, maissa ja vuosina.
 			</p>
 			<h3>Mitä omasta tilitysdatasta voidaan tietää?</h3>
 			<p>
-				Rojaltit.net analysoi niitä tietoja, jotka Teosto antaa oikeudenhaltijalle tämän omista
-				tilityksistään. Palvelu ei päättele sellaista, mitä lähdedatasta ei voida todentaa.
+				Rojaltit.net analysoi oikeudenhaltijalle hänen omista tilityksistään toimitettua dataa.
+				Tällä hetkellä työkalu tukee Teoston CSV-muotoista tilitysdataa.
 			</p>
 			<p>
-				Teoston tilitysdatasta voidaan nähdä esimerkiksi maksettuja korvauksia, niiden käyttöjaksoja
-				ja tilitysalueita sekä maksamisen ajankohtia. Näiden perusteella voidaan mitata esimerkiksi
-				käytön ja maksamisen välistä aikaa, vertailla eri tilitysalueita sekä tarkastella, kuinka
-				paljon samoihin tai vanhoihin käyttöjaksoihin liittyviä korvauksia maksetaan myöhemmin.
+				Työkalu näyttää sen, mitä datasta voidaan todentaa – eikä päättele sellaista, mihin
+				lähdedata ei anna vastausta.
 			</p>
 			<p>
-				Kaikki tilityksen arvioimiseksi kiinnostavat tiedot eivät kuitenkaan käy ilmi
-				oikeudenhaltijalle toimitettavasta tilitysdatasta. Sen perusteella ei välttämättä voida
-				vastata esimerkiksi seuraaviin kysymyksiin:
+				Tilitysdatasta voidaan nähdä esimerkiksi maksetut korvaukset, niihin liittyvät käyttöjaksot
+				ja tilitysalueet sekä maksamisen ajankohta. Näiden tietojen perusteella voidaan mitata
+				käytön ja maksamisen välistä aikaa, vertailla eri maita ja tilitysalueita sekä tarkastella,
+				kuinka paljon vanhoihin käyttöjaksoihin liittyviä korvauksia maksetaan myöhemmin.
+			</p>
+			<p>
+				Kaikki korvauksen elinkaaren arvioimiseksi tarvittavat tiedot eivät kuitenkaan sisälly
+				oikeudenhaltijalle toimitettavaan tilitysdataan. Pelkän tilitysdatan perusteella ei
+				välttämättä voida vastata esimerkiksi seuraaviin kysymyksiin:
 			</p>
 			<ul>
-				<li>Milloin korvaus kerättiin tai vastaanotettiin Teostossa?</li>
+				<li>Milloin korvaus alun perin kerättiin tai vastaanotettiin?</li>
 				<li>Missä tilitysprosessin vaiheessa mahdollinen pitkä käsittelyaika syntyi?</li>
 				<li>
 					Mikä korvauksen määrä oli ennen hallinnointipalkkioita ja muita vähennyksiä, ja mitä siitä
-					tosiasiassa vähennettiin?
+					vähennettiin?
 				</li>
 				<li>
 					Onko korvaus maksettu yhteishallinnointilain mukaisessa määräajassa ja, jos määräaika
 					ylittyi, mikä oli viiveen objektiivinen syy?
 				</li>
+				<li>Onko oikeudenhaltijalle kohdennettu korvauksia, joita ei ole vielä maksettu?</li>
 				<li>
 					Miten voidaan varmistua siitä, että kaikki oikeudenhaltijalle kuuluvat korvaukset on
 					tunnistettu, kohdistettu ja tilitetty?
 				</li>
 			</ul>
 			<p>
-				Viimeiseen kysymykseen ei voida vastata pelkän Teoston tilitysdatan perusteella, koska se
-				edellyttäisi myös tietoa tapahtuneesta musiikin käytöstä ja siitä, mitä käyttöä Teostolle
-				tai ulkomaisille tekijänoikeusjärjestöille on raportoitu.
+				Myöskään viimeiseen kysymykseen ei voida vastata pelkän tilitysdatan perusteella. Se
+				edellyttäisi lisäksi tietoa musiikin käytöstä ja siitä, mitä käyttöä kotimaisille tai
+				ulkomaisille tekijänoikeusjärjestöille on raportoitu.
 			</p>
 			<h3>Yhteinen tutkimusaineisto</h3>
 			<p>
-				Voit käyttää rojaltit.netiä pelkästään omien tilitystesi analysointiin. Tällöin tilitysdata
+				Voit käyttää Rojaltit.netiä pelkästään omien tilitystesi analysointiin. Tällöin tilitysdata
 				käsitellään selaimessasi eikä sitä lähetetä palvelimelle.
 			</p>
 			<p>
 				Halutessasi voit erikseen osallistua yhteisen tutkimusaineiston muodostamiseen. Tällöin
 				palvelimelle lähetettävästä aineistosta poistetaan suorat tunnistetiedot, aineisto
-				pseudonymisoidaan, ja lähetettävät tiedot rajataan tutkimuksen kannalta tarpeellisiin
+				pseudonymisoidaan ja lähetettävät tiedot rajataan tutkimuksen kannalta tarpeellisiin
 				tietoihin.
 			</p>
 			<p>
-				Mitä enemmän vertailukelpoista aineistoa kertyy, sitä paremmin voimme tutkia esimerkiksi
-				tilitysaikojen jakaumia, eri tilitysalueiden ja maiden välisiä eroja, jälkikäteen
-				maksettavien korvausten määrää sekä sitä, ovatko tilitysajat vuosien aikana lyhentyneet vai
-				pidentyneet.
+				Mitä enemmän vertailukelpoista aineistoa kertyy, sitä paremmin voimme tutkia esimerkiksi:
 			</p>
+			<ul>
+				<li>tilitysaikojen jakaumia</li>
+				<li>eri tilitysalueiden ja maiden välisiä eroja</li>
+				<li>vanhoihin käyttöjaksoihin liittyvien myöhempien tilitysten määrää</li>
+				<li>tilitysaikojen muutoksia eri vuosina.</li>
+			</ul>
 			<p>
 				Ennen aineiston lähettämistä näet, mitä tietoja aineistosta poistetaan ja mitä tietoja
-				yhteiseen tutkimusaineistoon lähetetään. Aineiston lähettäminen tulee mahdolliseksi, kun
-				olet ladannut tilitysdatan (.csv).
+				yhteiseen tutkimusaineistoon lähetetään. Aineiston lähettäminen tulee mahdolliseksi vasta,
+				kun olet ladannut tilitysdatasi selaimelle.
 			</p>
 			<p>
-				Kysymysten tai lisäselvitysten osalta voit olla myös suoraan yhteydessä:
+				Kysymyksissä ja lisätietoja varten voit olla suoraan yhteydessä:
 				<a class="underline" href="mailto:arttu@arttusilvast.com">arttu@arttusilvast.com</a> tai
 				<a class="underline" href="mailto:hello@pekkapulli.com">hello@pekkapulli.com</a>.
 			</p>
