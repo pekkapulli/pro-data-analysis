@@ -141,8 +141,9 @@
 </script>
 
 <section class="rounded-lg border border-gray-200 bg-white p-4">
-	<h3 class="text-xl font-semibold">Mediaanijakauma ({selectedCountryLabel})</h3>
-	<p class="text-sm text-gray-600">Esityksen ja selvityksen välisten kuukausien jakauma.</p>
+	<h3 class="text-xl font-semibold">
+		Esityksen ja selvityksen välisten kuukausien jakauma ({selectedCountryLabel})
+	</h3>
 	<p class="text-sm text-gray-600">
 		Arvot kuvaavat Teoston aineiston rivejä, eivät yksittäisiä kappaleita.
 	</p>
