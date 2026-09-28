@@ -10,10 +10,8 @@ export const actions: Actions = {
 		const formData = await request.formData();
 		const targetEmail = env.SENDGRID_TARGET_EMAIL?.trim();
 		const senderEmail = env.SENDGRID_SENDER_EMAIL?.trim();
-		const csv = ((formData.get('csv') as string | null) ?? '').trim();
-		const fileName =
-			((formData.get('fileName') as string | null) ?? 'teosto-pseudonymized.csv').trim() ||
-			'teosto-pseudonymized.csv';
+		const attachment = formData.get('attachment');
+		const fileName = attachment instanceof File ? attachment.name : 'teosto-pseudonymized.csv.gz';
 		const saltFingerprint = ((formData.get('saltFingerprint') as string | null) ?? '').trim();
 		const hasResearchConsent = formData.get('researchConsent') === 'yes';
 
@@ -35,8 +33,8 @@ export const actions: Actions = {
 			});
 		}
 
-		if (!csv) {
-			return fail(400, { ...base, error: 'No pseudonymized CSV data was provided.' });
+		if (!(attachment instanceof File) || attachment.size === 0) {
+			return fail(400, { ...base, error: 'No pseudonymized CSV file was provided.' });
 		}
 
 		if (!hasResearchConsent) {
@@ -58,11 +56,15 @@ export const actions: Actions = {
 		const submittedAt = new Date().toISOString();
 		const payload = buildSendgridPseudonymizedMailPayload({
 			to: targetEmail,
-			csv,
+			csv: '',
 			fileName,
 			saltFingerprint,
 			senderEmail,
-			consentConfirmedAt: submittedAt
+			consentConfirmedAt: submittedAt,
+			attachment: {
+				content: Buffer.from(await attachment.arrayBuffer()).toString('base64'),
+				type: attachment.type || 'application/gzip'
+			}
 		});
 
 		let response: Response;

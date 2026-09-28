@@ -24,6 +24,19 @@ describe('buildSendgridPseudonymizedMailPayload', () => {
 		assert.match(payload.content[0].value, /abc12345/);
 	});
 
+	it('uses the supplied compressed attachment without re-encoding it', () => {
+		const payload = buildSendgridPseudonymizedMailPayload({
+			to: 'researcher@example.com',
+			csv: '',
+			fileName: 'teosto-pseudonymized.csv.gz',
+			senderEmail: 'sender@example.com',
+			attachment: { content: 'H4sIAAAAAAAA', type: 'application/gzip' }
+		});
+
+		assert.equal(payload.attachments?.[0].content, 'H4sIAAAAAAAA');
+		assert.equal(payload.attachments?.[0].type, 'application/gzip');
+	});
+
 	it('keeps the paid amount column in the pseudonymized CSV export', async () => {
 		const result = await buildPseudonymizedCsvExport([
 			{

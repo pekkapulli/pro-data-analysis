@@ -81,6 +81,18 @@
 		}
 	}
 
+	async function createCompressedCsvAttachment(): Promise<File> {
+		if (typeof CompressionStream === 'undefined') {
+			throw new Error('This browser does not support compressed file uploads.');
+		}
+
+		const compressedStream = new Blob([csvContent], { type: 'text/csv;charset=utf-8' })
+			.stream()
+			.pipeThrough(new CompressionStream('gzip'));
+		const compressedBlob = await new Response(compressedStream).blob();
+		return new File([compressedBlob], `${fileName}.gz`, { type: 'application/gzip' });
+	}
+
 	const rulesSummary = $derived(
 		PSEUDONYMIZATION_RULES.map((rule) => `${rule.field}: ${rule.details}`)
 	);
@@ -132,8 +144,15 @@
 							return;
 						}
 
-						formData.set('csv', csvContent);
-						formData.set('fileName', fileName);
+						try {
+							const attachment = await createCompressedCsvAttachment();
+							formData.set('attachment', attachment, attachment.name);
+						} catch {
+							errorMessage =
+								'Pakkaaminen ennen lähetystä epäonnistui. Lataa aineisto ja lähetä se sähköpostilla.';
+							return;
+						}
+
 						formData.set('saltFingerprint', saltFingerprint);
 
 						isSending = true;

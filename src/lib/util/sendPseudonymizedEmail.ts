@@ -5,6 +5,10 @@ export type SendgridPseudonymizedMailInput = {
 	saltFingerprint?: string;
 	senderEmail: string;
 	consentConfirmedAt?: string;
+	attachment?: {
+		content: string;
+		type: string;
+	};
 };
 
 export function buildSendgridPseudonymizedMailPayload({
@@ -13,9 +17,10 @@ export function buildSendgridPseudonymizedMailPayload({
 	fileName,
 	saltFingerprint = '',
 	senderEmail,
-	consentConfirmedAt = ''
+	consentConfirmedAt = '',
+	attachment
 }: SendgridPseudonymizedMailInput) {
-	const attachmentContent = Buffer.from(csv, 'utf-8').toString('base64');
+	const attachmentContent = attachment?.content ?? Buffer.from(csv, 'utf-8').toString('base64');
 	const resolvedSenderEmail = senderEmail.trim();
 	if (!resolvedSenderEmail) {
 		throw new Error('SENDGRID_SENDER_EMAIL is not configured');
@@ -40,7 +45,7 @@ export function buildSendgridPseudonymizedMailPayload({
 			{
 				content: attachmentContent,
 				filename: fileName,
-				type: 'text/csv',
+				type: attachment?.type ?? 'text/csv',
 				disposition: 'attachment'
 			}
 		]
