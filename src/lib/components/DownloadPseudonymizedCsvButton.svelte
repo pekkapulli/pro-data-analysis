@@ -245,7 +245,7 @@
 			<dl class="mt-3 grid gap-2 sm:grid-cols-[10rem_1fr]">
 				<dt class="font-medium">Tiedosto</dt>
 				<dd class="break-all">{submissionReceipt.fileName}</dd>
-				<dt class="font-medium">Suolan sormenjälki</dt>
+				<dt class="font-medium">Aikaleimasta muodostettu yksilöllinen numerosarjasi</dt>
 				<dd class="font-mono">{submissionReceipt.saltFingerprint}</dd>
 				<dt class="font-medium">Lähetysaika</dt>
 				<dd>{new Date(submissionReceipt.submittedAt).toLocaleString('fi-FI')}</dd>
