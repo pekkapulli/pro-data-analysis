@@ -11,7 +11,8 @@ export const actions: Actions = {
 		const targetEmail = env.SENDGRID_TARGET_EMAIL?.trim();
 		const senderEmail = env.SENDGRID_SENDER_EMAIL?.trim();
 		const attachment = formData.get('attachment');
-		const fileName = attachment instanceof File ? attachment.name : 'teosto-pseudonymized.csv.gz';
+		const uploadedFile = attachment !== null && typeof attachment !== 'string' ? attachment : null;
+		const fileName = uploadedFile?.name || 'teosto-pseudonymized.csv.gz';
 		const saltFingerprint = ((formData.get('saltFingerprint') as string | null) ?? '').trim();
 		const hasResearchConsent = formData.get('researchConsent') === 'yes';
 
@@ -33,7 +34,7 @@ export const actions: Actions = {
 			});
 		}
 
-		if (!(attachment instanceof File) || attachment.size === 0) {
+		if (!uploadedFile || uploadedFile.size === 0) {
 			return fail(400, { ...base, error: 'No pseudonymized CSV file was provided.' });
 		}
 
@@ -62,8 +63,8 @@ export const actions: Actions = {
 			senderEmail,
 			consentConfirmedAt: submittedAt,
 			attachment: {
-				content: Buffer.from(await attachment.arrayBuffer()).toString('base64'),
-				type: attachment.type || 'application/gzip'
+				content: Buffer.from(await uploadedFile.arrayBuffer()).toString('base64'),
+				type: uploadedFile.type || 'application/gzip'
 			}
 		});
 
